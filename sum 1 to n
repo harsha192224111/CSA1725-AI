@@ -1,0 +1,6 @@
+sum(0, 0).   % Base case: Sum of integers from 1 to 0 is 0.
+sum(N, Sum) :-
+    N > 0,    % Ensure N is a positive integer
+    N1 is N - 1,
+    sum(N1, Sum1),  % Recursively compute sum(N-1)
+    Sum is Sum1 + N. % Sum is sum(N-1) + N
