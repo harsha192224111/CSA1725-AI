@@ -1,0 +1,12 @@
+% Database of Planets
+planet(mercury, 1, 0.055, 0.387, 88).
+planet(venus, 2, 0.815, 0.723, 225).
+planet(earth, 3, 1.000, 1.000, 365).
+planet(mars, 4, 0.107, 1.524, 687).
+planet(jupiter, 5, 318.0, 5.203, 4333).
+planet(saturn, 6, 95.0, 9.539, 10759).
+planet(uranus, 7, 14.5, 19.18, 30689).
+planet(neptune, 8, 17.2, 30.07, 60182).
+
+% Predicate to retrieve the properties of a planet
+get_planet(Name, Position, Mass, Distance, OrbitalPeriod) :- planet(Name, Position, Mass, Distance, OrbitalPeriod).
