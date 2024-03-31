@@ -1,0 +1,20 @@
+% Database of Teachers
+teacher(teacher1, math).
+teacher(teacher2, science).
+teacher(teacher3, history).
+
+% Database of Students
+student(student1, math).
+student(student2, science).
+student(student3, history).
+
+% Database of Subjects
+subject(math).
+subject(science).
+subject(history).
+
+% Predicate to retrieve the teacher of a subject
+get_teacher(Subject, Teacher) :- teacher(Teacher, Subject).
+
+% Predicate to retrieve the students of a subject
+get_students(Subject, Students) :- findall(Student, student(Student, Subject), Students).
